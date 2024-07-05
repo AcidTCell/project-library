@@ -25,7 +25,7 @@ function addBookToLibrary() {
 }
 
 function displayBooks() {
-  const libraryContainer = document.getElementById('library-container');
+  const libraryContainer = document.querySelector('.libraryContainer');
   libraryContainer.innerHTML = ''; // Clear previous content
 
   myLibrary.forEach((book, index) => {
@@ -33,10 +33,19 @@ function displayBooks() {
     bookCard.classList.add('book-card');
     
     bookCard.innerHTML = `
-      <h3>${book.name}</h3>
-      <p>Author: ${book.author}</p>
-      <p>Pages: ${book.pages}</p>
-      <p>Read: ${book.read ? 'Yes' : 'No'}</p>
+    <div class="card">
+      <div class="cardHeader">${book.name}</div>
+      <div class="cardDescription">
+        <p>Author: ${book.author}</p>
+        <p>Pages: ${book.pages}</p>
+        <p>Read: ${book.read ? 'Yes' : 'No'}</p>
+    </div>
+        <div class="cardIconContainer">
+            <div><img src="imgs/star-plus-outline.svg" alt="" class="cardIcon"></div>
+            <div><img src="imgs/eye-plus-outline.svg" alt=""class="cardIcon"></div>
+            <div><img src="imgs/source-fork.svg" alt=""class="cardIcon"></div>
+        </div>
+    </div>
     `;
     
     libraryContainer.appendChild(bookCard);
