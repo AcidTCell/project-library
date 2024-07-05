@@ -2,3 +2,24 @@
     margin: 0;
     padding: 0;
 }
+
+html{
+
+
+}
+
+:root {
+    --content: #f0f9ff;
+    --color-100: #e0f2fe;
+    --color-200: #bae6fd;
+    --color-300: #7dd3fc;
+    --color-400: #38bdf8;
+    --sidebar: #0ea5e9;
+    --sidebar2: #0284c7;
+    --color-700: #0369a1;
+    --color-800: #075985;
+    --color-900: #0c4a6e;
+    --color-950: #082f49;
+    --cardSide: #334155;
+    --cardHover: #cbd5e1;
+  }
