@@ -3,11 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <title>Project Library</title>
 </head>
 <body>
-    <div id="library-container"></div>
+    <div class="mainContainer">
+        <div class="sidebarContainer">
+            
+                
+            <div class="branding"> <img src="imgs/view-dashboard.svg" alt="dashboard" class="dashboard">Dashboard</div>
+            
+            <div class="navigation">
+                <div class="navContainer"><img src="imgs/home.svg" alt="" class="navIcon"><div class="navItem">Home</div></div>
+
+                <div class="navContainer"><img src="imgs/card-account-details.svg" alt="" class="navIcon"><div class="navItem">Profile</div></div>
+                <div class="navContainer"><img src="imgs/message-reply.svg" alt="" class="navIcon"><div class="navItem">Messages</div></div>
+                <div class="navContainer"><img src="imgs/clock-time-three.svg" alt="" class="navIcon"><div class="navItem">History</div></div>
+                <div class="navContainer"><img src="imgs/file-multiple.svg" alt="" class="navIcon"><div class="navItem">Tasks</div></div>
+                <div class="navContainer"><img src="imgs/account-group.svg" alt="" class="navIcon"><div class="navItem">Communities</div></div>
+                <div class="navItem"></div>
+                <div class="navItem"></div>
+                <div class="navContainer"><img src="imgs/cog.svg" alt="" class="navIcon"><div class="navItem">Settings</div></div>
+                <div class="navContainer"><img src="imgs/help-rhombus.svg" alt="" class="navIcon"><div class="navItem">Support</div></div>
+                <div class="navContainer"><img src="imgs/shield-check.svg" alt="" class="navIcon"><div class="navItem">Privacy</div></div>
+            </div>
+        </div>
+        <div class="headerContainer">
+            <div class="upperHeader">
+                <img src="imgs/magnify.svg" alt="search bar" class="searchIcon">
+                <div class="searchContainer">
+                    <input type="text" placeholder="Search..." class="searchBar">
+                </div>
+                <div class="menuContainer">
+                    <img src="imgs/bell-ring-outline.svg" alt="bell" class="bellIcon">
+                    <img src="imgs/assasin.png" alt="assasin" class="charIconSmall">
+                    <button class="userName">Justin Cimafranca</button>
+                </div>
+            </div>
+            <div class="lowerHeader">
+                <div>
+                    <img src="imgs/assasin.png" alt="assasin" class="charIcon1">
+                </div>
+                <div class="introduction">
+                    <h3>Hi there,</h3>
+                    <h1>Justin Cimafranca (@susejdog)</h1>
+                </div>
+
+                <div class="menuContainer">
+                    <button class="menuButton">New</button>
+                    <button class="menuButton">Upload</button>
+                    <button class="menuButton">Share</button>
+                </div>
+            </div>
+        </div>
+        <div class="contentContainer">
+            <div class="contentLabel1">Your Projects</div>
+                <div class="projects">
+                    <div class="card">
+                        <div class="cardHeader">Smart Golf Ball Tracker</div>
+                        <div class="cardDescription">Develop a smart golf ball with embedded GPS and accelerometer sensors to track ball trajectory, speed, and spin. This project aims to provide real-time data analytics and visualization to help golfers improve their swing consistency and accuracy.</div>
+                        <div class="cardIconContainer">
+                            <div><img src="imgs/star-plus-outline.svg" alt="" class="cardIcon"></div>
+                            <div><img src="imgs/eye-plus-outline.svg" alt=""class="cardIcon"></div>
+                            <div><img src="imgs/source-fork.svg" alt=""class="cardIcon"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardHeader">Break 80 Golf App</div>
+                        <div class="cardDescription">Create a mobile app designed to help golfers break the 80-stroke barrier consistently. Features include personalized practice routines, shot tracking, statistical analysis, and tips from professional golfers. The app aims to enhance performance through data-driven insights and training plans.</div>
+                        <div class="cardIconContainer">
+                            <div><img src="imgs/star-plus-outline.svg" alt="" class="cardIcon"></div>
+                            <div><img src="imgs/eye-plus-outline.svg" alt=""class="cardIcon"></div>
+                            <div><img src="imgs/source-fork.svg" alt=""class="cardIcon"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardHeader">Valorant Agent Performance Analyzer</div>
+                        <div class="cardDescription">Build a web-based tool that analyzes Valorant player performance with different agents. Features include heatmaps of agent usage, win rates across maps, and comparison tools. This project aims to provide strategic insights and help players optimize their agent selection based on playstyle and team composition.</div>
+                        <div class="cardIconContainer">
+                            <div><img src="imgs/star-plus-outline.svg" alt="" class="cardIcon"></div>
+                            <div><img src="imgs/eye-plus-outline.svg" alt=""class="cardIcon"></div>
+                            <div><img src="imgs/source-fork.svg" alt=""class="cardIcon"></div>
+                        </div>
+                    </div>
+                    <div class="card"><div class="cardHeader">Golf Swing Mechanics Simulator</div>
+                    <div class="cardDescription">Develop a virtual reality (VR) simulation of various golf swing mechanics using motion capture technology. This project aims to simulate realistic golf courses and practice scenarios where users can analyze and refine their swings in a virtual environment, improving muscle memory and technique.
+                    </div>
+                    <div class="cardIconContainer">
+                        <div><img src="imgs/star-plus-outline.svg" alt="" class="cardIcon"></div>
+                        <div><img src="imgs/eye-plus-outline.svg" alt=""class="cardIcon"></div>
+                        <div><img src="imgs/source-fork.svg" alt=""class="cardIcon"></div>
+                    </div>
+                </div>
+                    <div class="card"><div class="cardHeader">Valorant Map Callout App</div>
+                    <div class="cardDescription">Create a mobile app that provides detailed callouts and strategies for Valorant maps. Features include interactive maps with labeled callouts, strategic tips, and user-generated content. This project aims to enhance communication and teamwork among players by providing consistent and clear map information.</div>
+                    <div class="cardIconContainer">
+                        <div><img src="imgs/star-plus-outline.svg" alt="" class="cardIcon"></div>
+                        <div><img src="imgs/eye-plus-outline.svg" alt=""class="cardIcon"></div>
+                        <div><img src="imgs/source-fork.svg" alt=""class="cardIcon"></div>
+                    </div>
+                </div>
+                    <div class="card">
+                        <div class="cardHeader">Automated Golf Course Maintenance Robot</div>
+                        <div class="cardDescription">Design and prototype an autonomous robot for golf course maintenance tasks such as mowing, sand raking, and divot repair. This project aims to reduce labor costs and increase efficiency in maintaining golf courses while minimizing environmental impact through precise and automated operations.</div>
+                        <div class="cardIconContainer">
+                            <div><img src="imgs/star-plus-outline.svg" alt="" class="cardIcon"></div>
+                            <div><img src="imgs/eye-plus-outline.svg" alt=""class="cardIcon"></div>
+                            <div><img src="imgs/source-fork.svg" alt=""class="cardIcon"></div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="contentLabel2">Announcements</div>
+            <div class="card2">
+                <div class="card2Group">
+                    <div class="card2Header">Alta Vista Scramble Vlog</div>
+                    <div class="card2Description">You are invited to play in Alta Vista, Pardo, Cebu on June 29th.</div>
+                </div>
+                <div class="card2Group">
+                    <div class="card2Header">Apex Legends Grind</div>
+                    <div class="card2Description">You are invited to play Apex with the ESHK lads on August 4th.</div>
+                </div>
+                <div class="card2Group">
+                    <div class="card2Header">Symph Bootcamp</div>
+                    <div class="card2Description">You are invited to to attend the Symph Bootcamp in Minglanilla, Cebu on August 25th.</div>
+                </div>
+            </div>
+
+
+            <div class="contentLabel3">Trending</div>
+            <div class="card3">
+                <div class="card3Group">
+                    <div>
+                        <img src="imgs/gingerbread-woman.png" alt="gingerbread woman" class="charIcon1">
+                    </div>
+                    <div class="introduction">
+                        <h2>@zxcynng</h3>
+                        <h3>Zxcy Nonog</h1>
+                    </div>
+                </div>
+
+                <div class="card3Group">
+                    <div>
+                        <img src="imgs/santa-claus.png" alt="santa claus" class="charIcon1">
+                    </div>
+                    <div class="introduction">
+                        <h2>@AcidTCell</h3>
+                        <h3>Jasper Cimafranca</h1>
+                    </div>
+                </div>
+
+                <div class="card3Group">
+                    <div>
+                        <img src="imgs/shepherd.png" alt="shepherd" class="charIcon1">
+                    </div>
+                    <div class="introduction">
+                        <h2>@Odette Squad</h3>
+                        <h3>Jason Cimafranca</h1>
+                    </div>
+                </div>
+
+                <div class="card3Group">
+                    <div>
+                        <img src="imgs/the-steadfast-tin-soldier.png" alt="soldier" class="charIcon1">
+                    </div>
+                    <div class="introduction">
+                        <h2>@Mr. Cherry</h3>
+                        <h3>Kristian Kintanar</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
 </body>
 </html>
