@@ -1,4 +1,4 @@
-const myLibrary = [];
+const myLibrary = [{name:'Hobit', author:'Jasper', pages: 340, read: 'yes'}, {name:'Hobit', author:'Jasper', pages: 340, read: 'yes'} ];
 
 function Book(name, author, pages, read) {
   this.name = name;
