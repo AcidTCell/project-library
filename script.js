@@ -26,7 +26,7 @@ function addBookToLibrary() {
 
 function displayBooks() {
   const libraryContainer = document.querySelector('.libraryContainer');
-  libraryContainer.innerHTML = ''; // Clear previous content
+  libraryContainer.innerHTML = '';
 
   myLibrary.forEach((book, index) => {
     const bookCard = document.createElement('div');
