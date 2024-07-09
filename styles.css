@@ -205,6 +205,10 @@ h3{
     background-color: #0056b3; /* Change background color on hover */
   }
 
+.hidden{
+    display: none;
+}
+
 .contentContainer{
     display: grid;
     grid-column: 2/3;

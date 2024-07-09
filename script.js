@@ -1,4 +1,4 @@
-const myLibrary = [{name:'Hobit', author:'Jasper', pages: 340, read: 'yes'}, {name:'Hobit', author:'Jasper', pages: 340, read: 'yes'} ];
+const myLibrary = [ ];
 
 function Book(name, author, pages, read) {
   this.name = name;
@@ -7,20 +7,8 @@ function Book(name, author, pages, read) {
   this.read = read;
 }
 
-function addBookToLibrary() {
-  while (true) {
-    let bookName = prompt("Enter a book name (type 'exit' to stop):");
-    if (bookName === "exit") {
-      break;
-    }
-    let bookAuthor = prompt("Enter the book's author:");
-    let bookPages = prompt("Enter the number of pages:");
-    let bookRead = prompt("Has the book been read? (yes/no):") === "yes";
-
-    let newBook = new Book(bookName, bookAuthor, bookPages, bookRead);
-    myLibrary.push(newBook);
-  }
-
+function addBookToLibrary(book) {
+  myLibrary.push(book);
   displayBooks();
 }
 
@@ -52,4 +40,23 @@ function displayBooks() {
   });
 }
 
-addBookToLibrary();
+document.querySelector('#newBookBtn').addEventListener('click', () => {
+  document.querySelector('#bookFormContainer').classList.toggle('hidden');
+});
+
+document.querySelector('#bookForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = document.querySelector('#name').value;
+  const author = document.querySelector('#author').value;
+  const pages = document.querySelector('#pages').value;
+  const read = document.querySelector('#read').checked;
+
+  const newBook = new Book(name, author, pages, read);
+  addBookToLibrary(newBook);
+
+  document.querySelector('#bookForm').reset();
+  document.querySelector('#bookFormContainer').classList.add('hidden');
+});
+
+displayBooks();
