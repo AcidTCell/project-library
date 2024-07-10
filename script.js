@@ -59,4 +59,3 @@ document.querySelector('#bookForm').addEventListener('submit', (e) => {
   document.querySelector('#bookFormContainer').classList.add('hidden');
 });
 
-displayBooks();
