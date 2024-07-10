@@ -12,6 +12,7 @@
     <title>Project Library</title>
 </head>
 <body>
+    <div class="dialog-overlay" style="display: none;"></div>
     <div class="mainContainer">
         <div class="sidebarContainer">
             
@@ -57,7 +58,7 @@
                 <div class="menuContainer">
                     <button id="newBookBtn" class="menuButton newBook">New Book</button>
 
-                    <div id="bookFormContainer" class="hidden">
+                    <dialog id="bookFormDialog">
                         <form id="bookForm">
                             <label for="name">Book Name:</label>
                             <input type="text" id="name" name="name" required><br>
@@ -72,8 +73,10 @@
                             <input type="checkbox" id="read" name="read"><br>
                 
                             <button type="submit">Add Book</button>
+                            <button type="button" id="cancelBtn">Cancel</button>
                         </form>
-                    </div>
+                    </dialog>
+                    
 
                     <button class="menuButton">Upload</button>
                     <button class="menuButton">Share</button>

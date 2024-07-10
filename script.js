@@ -40,11 +40,23 @@ function displayBooks() {
   });
 }
 
-document.querySelector('#newBookBtn').addEventListener('click', () => {
-  document.querySelector('#bookFormContainer').classList.toggle('hidden');
+const newBookBtn = document.querySelector('#newBookBtn');
+const bookFormDialog = document.querySelector('#bookFormDialog');
+const bookForm = document.querySelector('#bookForm');
+const cancelBtn = document.querySelector('#cancelBtn');
+const dialogOverlay = document.querySelector('.dialog-overlay');
+
+newBookBtn.addEventListener('click', () => {
+  bookFormDialog.showModal();
+  dialogOverlay.style.display = 'flex';
 });
 
-document.querySelector('#bookForm').addEventListener('submit', (e) => {
+cancelBtn.addEventListener('click', () => {
+  bookFormDialog.close();
+  dialogOverlay.style.display = 'none';
+});
+
+bookForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const name = document.querySelector('#name').value;
@@ -55,7 +67,8 @@ document.querySelector('#bookForm').addEventListener('submit', (e) => {
   const newBook = new Book(name, author, pages, read);
   addBookToLibrary(newBook);
 
-  document.querySelector('#bookForm').reset();
-  document.querySelector('#bookFormContainer').classList.add('hidden');
+  bookForm.reset();
+  bookFormDialog.close();
+  dialogOverlay.style.display = 'none';
 });
 
