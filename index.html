@@ -12,6 +12,24 @@
     <title>Project Library</title>
 </head>
 <body>
+    <dialog id="bookFormDialog">
+        <form id="bookForm">
+            <label for="name">Book Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required><br>
+
+            <label for="pages">Pages:</label>
+            <input type="number" id="pages" name="pages" required><br>
+
+            <label for="read">Read:</label>
+            <input type="checkbox" id="read" name="read"><br>
+
+            <button type="submit">Add Book</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+        </form>
+    </dialog>
     <div class="dialog-overlay" style="display: none;"></div>
     <div class="mainContainer">
         <div class="sidebarContainer">
@@ -57,27 +75,6 @@
 
                 <div class="menuContainer">
                     <button id="newBookBtn" class="menuButton newBook">New Book</button>
-
-                    <dialog id="bookFormDialog">
-                        <form id="bookForm">
-                            <label for="name">Book Name:</label>
-                            <input type="text" id="name" name="name" required><br>
-                
-                            <label for="author">Author:</label>
-                            <input type="text" id="author" name="author" required><br>
-                
-                            <label for="pages">Pages:</label>
-                            <input type="number" id="pages" name="pages" required><br>
-                
-                            <label for="read">Read:</label>
-                            <input type="checkbox" id="read" name="read"><br>
-                
-                            <button type="submit">Add Book</button>
-                            <button type="button" id="cancelBtn">Cancel</button>
-                        </form>
-                    </dialog>
-                    
-
                     <button class="menuButton">Upload</button>
                     <button class="menuButton">Share</button>
                 </div>
