@@ -7,6 +7,10 @@ function Book(name, author, pages, read) {
   this.read = read;
 }
 
+Book.prototype.toggleReadStatus = function() {
+  this.read = !this.read;
+};
+
 function addBookToLibrary(book) {
   myLibrary.push(book);
   displayBooks();
@@ -19,6 +23,7 @@ function displayBooks() {
   myLibrary.forEach((book, index) => {
     const bookCard = document.createElement('div');
     bookCard.classList.add('book-card');
+    bookCard.setAttribute('data-index', index);
     
     bookCard.innerHTML = `
     <div class="card">
@@ -30,14 +35,35 @@ function displayBooks() {
     </div>
         <div class="cardIconContainer">
             <div><img src="imgs/star-plus-outline.svg" alt="" class="cardIcon"></div>
-            <div><img src="imgs/eye-plus-outline.svg" alt=""class="cardIcon"></div>
-            <div><img src="imgs/source-fork.svg" alt=""class="cardIcon"></div>
+            <div class="toggle-read-status" data-index="${index}"><img src="imgs/eye-plus-outline.svg" alt=""class="cardIcon"></div>
+            <div class="delete-icon" data-index="${index}"><img src="imgs/source-fork.svg" alt=""class="cardIcon"></div>
         </div>
     </div>
     `;
     
     libraryContainer.appendChild(bookCard);
   });
+  const deleteButtons = document.querySelectorAll('.delete-icon');
+  deleteButtons.forEach(button => {
+  button.addEventListener('click', deleteBook);
+  });
+  const toggleButtons = document.querySelectorAll('.toggle-read-status');
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', toggleReadStatus);
+  });
+  
+}
+
+function deleteBook(event) {
+  const index = event.target.closest('.delete-icon').getAttribute('data-index');
+  myLibrary.splice(index, 1);
+  displayBooks();
+}
+
+function toggleReadStatus(event) {
+  const index = event.target.closest('.toggle-read-status').getAttribute('data-index');
+  myLibrary[index].toggleReadStatus();
+  displayBooks();
 }
 
 const newBookBtn = document.querySelector('#newBookBtn');
@@ -45,6 +71,7 @@ const bookFormDialog = document.querySelector('#bookFormDialog');
 const bookForm = document.querySelector('#bookForm');
 const cancelBtn = document.querySelector('#cancelBtn');
 const dialogOverlay = document.querySelector('.dialog-overlay');
+
 
 newBookBtn.addEventListener('click', () => {
   bookFormDialog.showModal();
